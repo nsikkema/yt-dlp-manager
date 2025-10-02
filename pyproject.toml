@@ -5,5 +5,30 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "yt-dlp>=2025.9.26",
+    "yt-dlp~=2025.9.26",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
+
+[tool.ruff]
+include = [
+    "main.py"
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+    "PL",
+    "N",
+    "RUF"
+]
+ignore = [
 ]
