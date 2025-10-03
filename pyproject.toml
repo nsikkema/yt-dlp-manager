@@ -3,6 +3,9 @@ name = "yt-dlp-manager"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Nick Sikkema", email = "contact@nicksikkema.com" }
+]
 requires-python = ">=3.13"
 dependencies = [
     "yt-dlp~=2025.9.26",
@@ -15,7 +18,8 @@ dev = [
 
 [tool.ruff]
 include = [
-    "main.py"
+    "src/*.py",
+    "src/**/*.py",
 ]
 
 [tool.ruff.lint]
@@ -32,3 +36,10 @@ select = [
 ]
 ignore = [
 ]
+
+[project.scripts]
+yt-dlp-manager = "yt_dlp_manager.main:main"
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
